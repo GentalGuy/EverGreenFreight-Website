@@ -22,7 +22,7 @@ header{
     display:flex;
     justify-content:end;
     align-items:center;
-    z-index: 2;
+    z-index: 9;
     
     
 }
@@ -241,10 +241,9 @@ border: 1px solid rgb(0, 255, 64);
   top: 30%;
   left: 5%;
   margin-left: 6.25rem;
-  
   border-radius: .5rem;
  
-  
+  text-shadow: 5px 5px  black;
   animation: fadein 2s ease-out forwards;
   overflow: hidden;
   /* backdrop-filter: blur(1px); */
@@ -278,7 +277,7 @@ border: 1px solid rgb(0, 255, 64);
     text-decoration: none;
     text-transform: uppercase;
     border: none;
-    
+    text-shadow: none;
     font-family: "Arial", Helvetica, sans-serif;
   }
 
@@ -310,13 +309,14 @@ border: 1px solid rgb(0, 255, 64);
   }
 
 
-.mySlides {display:none;}
+.mySlides {display:none;
+}
 .video-slider{
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
   object-fit: cover;
   opacity: 1;
@@ -343,6 +343,7 @@ border: 1px solid rgb(0, 255, 64);
   border-left: .375rem dashed rgb(255, 255, 255);
   z-index: 5;
   opacity: 1;
+  display: none;
 }
 .arrowbutton{
   position: absolute;
@@ -385,6 +386,19 @@ border: 1px solid rgb(0, 255, 64);
   }
 }
 
+.section1backgroundimg{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.section1backgroundimg img{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+ 
+}
+
 @media (max-width:800px){
   #highlight{
     padding: 0;
@@ -393,6 +407,27 @@ border: 1px solid rgb(0, 255, 64);
     width: 80%;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .carousel-container {
+    display: none;
+  }
+ 
+  .section1backgroundimg{
+    display: block;
+  }
+
+  .centerbutton{
+    display: block;
+  }
+}
+
+
+
+.section-01background{
+  display: none;
+}
+
 
 .section-2{
   width: 100vw;
@@ -667,7 +702,14 @@ padding-top: 16.875rem;
   }
 }
 
-  
+@media (max-width:768px){
+  .card-3{
+    margin-top: 9px;
+    margin-bottom: 30px;
+
+  }
+}
+
 @media (max-width:768px){
   .section-3{
     width: 100vw;
@@ -682,8 +724,6 @@ padding-top: 16.875rem;
   .card-3{
     padding: 0;
     padding-bottom: 9px;
-	   margin-top: 9px;
-    margin-bottom: 30px;
     
   }
 }
@@ -819,7 +859,7 @@ letter-spacing: 0.2rem;
 }
 
 .trust-section4{
-  height:auto;
+  
   padding: 1.6875rem;
   width: 100%;
   margin: 0px;
