@@ -769,10 +769,10 @@ letter-spacing: 0.2rem;
 }
 
 .trust-section4{
-  
-  padding: 0;
+  height:auto;
+  padding: 1.6875rem;
   width: 100%;
-  margin: 10px;
+  margin: 0px;
 }
   .right-section4{
   display: none;
