@@ -259,7 +259,7 @@ border: 1px solid rgb(0, 255, 64);
   color: transparent;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-width: .3125rem;
   -webkit-text-stroke-color: rgb(29, 255, 85);
   
   }
