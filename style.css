@@ -415,8 +415,6 @@ padding-top: 16.875rem;
   .section-2 .rightside{
     display: flex;
     height: auto;
-    
-    height: auto;
     width: 100vw;
     padding: 0;
     flex-direction: column;
@@ -437,11 +435,20 @@ padding-top: 16.875rem;
     height: 100%;
   }
 
+   .section-2leftfirst{
+    margin-left: 3.75rem;
+  }
+
   .rightside  h3{
     font-size: 1.8rem;
+	  font-size: 1.8rem;
+    text-align: center;
+    margin-left: 3.75rem;
   }
   .rightside h1{
     font-size: 1.2rem;
+	  align-text:center;
+	  
   }
 
   .rightside p{
