@@ -154,11 +154,12 @@ border: 1px solid rgb(0, 255, 64);
 .dropdown_menu {
   
   position: absolute;
-  right: 2rem;
-  top: 3.75rem;
+  right: 3rem;
+  top: 4.75rem;
   width: 15.75rem;
   height: 0;
   background-color: rgba(6, 6, 6, 0.1);
+  
   backdrop-filter: blur(15px);
   border-radius: .5rem;
   overflow: hidden;
@@ -234,7 +235,7 @@ border: 1px solid rgb(0, 255, 64);
   font-weight: 500;
   position: absolute;
   z-index: 1;
-  color:white;
+  color:rgb(255, 255, 255);
   font-size: 5.20vw;
   text-align: left;
   top: 30%;
@@ -259,7 +260,7 @@ border: 1px solid rgb(0, 255, 64);
   color: transparent;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-  -webkit-text-stroke-width: 0.0313rem;
+  -webkit-text-stroke-width: .0313rem;
   -webkit-text-stroke-color: rgb(29, 255, 85);
   
   }
@@ -411,11 +412,13 @@ padding-top: 16.875rem;
     justify-content: center;
     align-items: center;
     height: auto;
+    width: 100vw;
   }
   .section-2 .rightside{
     display: flex;
+    
     height: auto;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     flex-direction: column;
     align-self: center;
@@ -435,20 +438,19 @@ padding-top: 16.875rem;
     height: 100%;
   }
 
-   .section-2leftfirst{
+  .section-2leftfirst{
     margin-left: 3.75rem;
   }
 
   .rightside  h3{
     font-size: 1.8rem;
-	  font-size: 1.8rem;
     text-align: center;
     margin-left: 3.75rem;
   }
   .rightside h1{
     font-size: 1.2rem;
-	  align-text:center;
-	  
+    text-align: center;
+    
   }
 
   .rightside p{
@@ -456,7 +458,12 @@ padding-top: 16.875rem;
   }
 
   .section-2left {
-    text-align: left;
+    text-align: center;
+    margin-left: 3.75rem;
+
+  }
+
+  .h1section2{
     margin-left: 3.75rem;
   }
 
