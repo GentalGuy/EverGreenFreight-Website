@@ -713,7 +713,6 @@ padding-top: 16.875rem;
 @media (max-width:768px){
   .section-3{
     width: 100vw;
-    overflow-y: scroll;
     
   }
 
