@@ -260,6 +260,7 @@ border: 1px solid rgb(0, 255, 64);
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   -webkit-text-stroke-width: .123rem;
+	text-shadow:none;
   -webkit-text-stroke-color: rgb(29, 255, 85);
   
   }
