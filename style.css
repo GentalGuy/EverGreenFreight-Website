@@ -953,8 +953,8 @@ footer ul{
   width: 250px;
   position: absolute;
   height: 250px;
-  left: 5px;
-  top: 10px;
+  left: 1.875rem;
+  top: 4.375rem;
   z-index: 3;
 }
 
@@ -982,12 +982,6 @@ footer ul{
  
 }
 
-.F-style{
-  position: absolute;
-  color: white;
-  left: 4.375rem;
-  top: 52%;
-}
 
 @media (max-width:776px){
 
