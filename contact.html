@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="index.html" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        font-family: "Poppins", sans-serif;
+      }
+      body::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.461);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: #00ff40;
+        border-radius: 2px;
+      }
+
+      nav {
+        width: 100%;
+        height: 100px;
+        background-color: #0e1111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+      }
+
+      .nav-left {
+        width: 12.5rem;
+        height: 100%;
+        margin-top: 7px;
+        position: relative;
+      }
+
+      .nav-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .nav-right {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        gap: 0.125rem;
+
+        flex-wrap: nowrap;
+      }
+
+      .nav-right a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.0625rem;
+        padding-right: 1.563vw;
+        padding-left: 1.563vw;
+        border-right: 1px solid #bbbbbb;
+        position: relative;
+      }
+      .nav-right a:nth-child(-n + 4) {
+        color: #c7c7c7;
+        transition: all 0.35s ease;
+      }
+
+      .nav-right a:nth-child(-n + 4)::after,
+      .nav-right a:nth-child(-n + 4)::before {
+        content: "";
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        transition: all 0.35s ease;
+        opacity: 0;
+      }
+
+      .nav-right a:nth-child(-n + 4)::before {
+        content: "";
+        right: 7%;
+        top: -20%;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: translate(-100%, 50%);
+      }
+
+      .nav-right a:nth-child(-n + 4)::after {
+        content: "";
+        left: 7%;
+        bottom: -20%;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #ffffff;
+        transform: translate(100%, -50%) rotate(180deg);
+      }
+
+      .nav-right a:hover:nth-child(-n + 4)::after {
+        transform: translate(0, 0) rotate(180deg);
+        opacity: 1;
+      }
+      .nav-right a:hover:nth-child(-n + 4)::before {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      .nav-right a:nth-child(-n + 4):hover {
+        color: #fff;
+      }
+
+      .nav-right a:nth-child(5) {
+        border: none;
+      }
+
+      .nav-right a:nth-child(6) {
+        background-color: transparent;
+        border: 2px solid #00ff40;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 400;
+        position: relative;
+        padding: 9px 12px;
+        width: 188px;
+        height: 2.8125rem;
+        transition: all linear 0.5s;
+        border-radius: 4px;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .nav-right a:nth-child(6)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: -1;
+        border-radius: 50%;
+        /* background: #32de84; */
+        background-color: #00ff40;
+        transition: all linear 0.5s;
+      }
+
+      .nav-right a:nth-child(6):hover {
+        color: black;
+        z-index: 3;
+      }
+
+      .nav-right a:hover:nth-child(6)::after {
+        width: 4.0625rem;
+        height: 4.0625rem;
+        transform: translate(-50%, -50%) scale(3);
+      }
+
+      .nav-menu {
+        color: white;
+        font-size: 35px;
+        display: none;
+        cursor: pointer;
+        transition: all 0.35s ease-in-out;
+      }
+
+      .nav-2 {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        background: #fff;
+        display: none;
+      }
+      .nav-2 a {
+        width: 100%;
+        font-weight: 500;
+        font-size: 30px;
+        text-decoration: none;
+        display: flex;
+        padding: 10px 30px;
+        align-items: center;
+        color: black;
+      }
+
+      .closingnav {
+        justify-content: flex-end;
+        position: fixed;
+        top: 10%;
+        z-index: 1000;
+      }
+      .closingnav i {
+        font-size: 40px;
+      }
+
+      @media (max-width: 680px) {
+        nav {
+          padding: 0 10px;
+        }
+        .nav-right a:nth-child(-n + 6) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .nav-right a:nth-child(-n + 5) {
+          display: none;
+        }
+        .nav-menu {
+          padding-left: 20px;
+          display: block;
+        }
+      }
+
+      @media (max-width: 680px) {
+        nav {
+          padding: 0 10px;
+        }
+        .nav-right a:nth-child(-n + 6) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .nav-right a:nth-child(-n + 5) {
+          display: none;
+        }
+        .nav-menu {
+          padding-left: 20px;
+          display: block;
+        }
+      }
+
+      .outercont {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-img {
+        width: 100vw;
+        height: 55vh;
+        background: url(image/contactus.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 250px;
+        z-index: -1;
+        background-position: 50% 50%;
+        left: 0%;
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        font-family: "Lato", sans-serif;
+      }
+
+      .headercont {
+        width: 100vw;
+        height: 10vh;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        padding: 70px;
+        font-family: "Lato", sans-serif;
+      }
+
+      .leftcont {
+        width: 50%;
+        height: auto;
+        padding-left: 10%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .leftcont h3 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #00ff40;
+      }
+      .leftcont p {
+        margin-top: 40px;
+        font-size: 1.2rem;
+        line-height: 2;
+        font-family: "Lato", sans-serif;
+      }
+      .leftcont h5 {
+        font-size: 2rem;
+      }
+      .rightcont {
+        width: 50%;
+        height: 80vh;
+        padding-left: 50px;
+      }
+
+      .rightcont h3 {
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .rightcont form {
+        font-size: 1.3rem;
+        padding-top: 20px;
+      }
+      .rightcont input {
+        width: 60%;
+        height: 40px;
+        border-radius: 3px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 1rem;
+        color: #444;
+        border: 1px solid #696969;
+      }
+
+      textarea {
+        overflow: auto;
+        resize: none;
+        width: 60%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #696969;
+        border-radius: 3px;
+        color: #444;
+      }
+
+      .int-form {
+        font-size: 1.1rem;
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: transparent;
+        border: 2px solid #00ff40;
+        color: #ffffff;
+        position: relative;
+        padding: 6px 12px;
+        transition: all linear 0.5s;
+        border-radius: 3px;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 500;
+        color: #444;
+      }
+
+      .int-form::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: -1;
+        border-radius: 50%;
+        background-color: #00ff40;
+        transition: all linear 0.5s;
+      }
+
+      .int-form:hover {
+        color: black;
+        z-index: 3;
+        text-shadow: none;
+      }
+
+      .int-form:hover::after {
+        width: 2.6rem;
+        height: 2.6rem;
+        transform: translate(-50%, -50%) scale(3);
+      }
+
+      @media (max-width: 1040px) {
+        .outercont {
+          flex-direction: column;
+          height: auto;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .leftcont {
+          padding: 0;
+          text-align: center;
+        }
+        .rightcont {
+          padding: 50px 10px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        form {
+          width: 100%;
+          align-self: center;
+        }
+        .rightcont input,
+        textarea {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 730px) {
+        .leftcont {
+          width: 90%;
+        }
+        .headercont {
+          margin-bottom: 50px;
+        }
+
+        .rightcont {
+          width: 90%;
+        }
+      }
+
+      footer {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        flex-wrap: wrap;
+      }
+
+      .footerlogo {
+        width: 25vw;
+        height: 100%;
+      }
+
+      .footerlogo img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer-bottom {
+        width: 75vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        padding: 40px 15px;
+      }
+
+      .column h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+
+      .column h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: rgb(0, 255, 64);
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+
+      .column ul li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .column ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+      }
+
+      .column ul li a:hover {
+        color: #ffffff;
+        padding-left: 8px;
+      }
+
+      .location {
+        text-align: left;
+      }
+      .location span {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 0.625rem;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      .location span a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .footer-map {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .col-text {
+        line-height: 1.1;
+      }
+
+      @media (max-width: 730px) {
+        footer {
+          flex-direction: column;
+          position: relative;
+          justify-content: center;
+        }
+
+        .footerlogo {
+          width: 50%;
+          height: 50%;
+        }
+
+        .footer-bottom {
+          justify-content: left;
+        }
+        .column {
+          margin-top: 20px;
+        }
+
+        .footer-map {
+          padding: 10px;
+        }
+
+        .footer-map div {
+          position: relative;
+          width: 100%;
+          left: -15%;
+        }
+      }
+
+      .footer-last {
+        background: black;
+        text-align: center;
+        padding: 15px;
+        font-size: 0.7rem;
+      }
+
+      .footer-last h3 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="header" id="header">
+          <div class="nav-left">
+            <img src="image/Ever Green Freight Inc13 PNG.png" alt="logo" />
+          </div>
+          <div class="nav-right">
+            <a href="index.html#About">About</a>
+            <a href="index.html#Services">Services</a>
+            <a href="index.html#Whyus">Why Us?</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:9057035833">905-703-5833</a>
+            <a href="form.html">Request a Quote</a>
+            <div class="nav-menu" onclick="showSlidebar()">
+              <i class="ri-menu-3-line"></i>
+            </div>
+          </div>
+        </nav>
+
+        <div class="nav-2">
+          <a onclick="hideSlidebar()" class="closingnav" href="#"
+            ><i class="ri-close-line"></i
+          ></a>
+          <a href="index.html#About">About</a>
+          <a href="index.html#Services">Services</a>
+          <a href="index.html#Whyus">Why Us?</a>
+          <a href="contact.html">Contact</a>
+          <a href="form.html">Request a Quote</a>
+        </div>
+      </header>
+
+      <section>
+        <div class="top-img"><h1>Contact Us</h1></div>
+        <div class="headercont">Let's Start a Conversation</div>
+        <div class="outercont">
+          <div class="leftcont">
+            <h3>We are always here to listen you.</h3>
+            <p>
+              We're dedicated to providing top-notch customer service and
+              addressing any inquiries or concerns you may have. Whether you're
+              looking to partner with us for your freight needs or have
+              questions about our services, we're here to help.
+            </p>
+            <br /><br />
+            <h5>How to Contact Us</h5>
+            <p>
+              Feel free to reach out to us via phone, email, or the contact form
+              given. Our team is available to assist you during regular business
+              hours and will respond to your inquiries promptly.
+              <br /><br />
+              We look forward to hearing from you and partnering with you to
+              meet all of your freight logistics needs!
+            </p>
+          </div>
+          <div class="rightcont">
+            <h3>Please note: all fields are required.</h3>
+            <form action="https://formspree.io/f/xjvneqpg" method="POST">
+              <label for="name">First Name:</label> <br />
+              <input
+                type="text"
+                placeholder="Enter Your First Name"
+                required
+                id="name"
+                name="first-name"
+              />
+              <br />
+              <label for="l-name">Last Name:</label> <br />
+              <input
+                type="text"
+                placeholder="Enter Your Last Name Here"
+                required
+                name="last-name"
+                id="l-name"
+              />
+              <br />
+              <label for="Company">Company Name:</label> <br />
+              <input
+                type="text"
+                placeholder="Company Name"
+                name="Company-name"
+                id="Company"
+                required
+              />
+              <br />
+              <label for="phone">Phone No:</label> <br />
+              <input
+                type="tel"
+                placeholder="Phone*"
+                name="Phone-no"
+                id="phone"
+                required
+              />
+              <br />
+              <label for="email">Email Id:</label> <br />
+              <input
+                type="email"
+                placeholder="Email*"
+                name="Email"
+                id="Email"
+                required
+              />
+              <br />
+              <textarea
+                placeholder="type your message......"
+                maxlength="500"
+                rows="6"
+                required
+                wrap="hard"
+                name="message"
+              ></textarea>
+              <br />
+              <button
+                class="int-form"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footerlogo">
+          <img src="image/Ever Green Freight Inc13 PNG.png" alt="logo" />
+        </div>
+        <div class="footer-bottom">
+          <div class="column">
+            <h4>EverGreenFreightInc</h4>
+            <ul>
+              <li><a href="index.html#Home">Home</a></li>
+              <li><a href="index.html#About">About</a></li>
+              <li><a href="index.html#Services">Services</a></li>
+              <li><a href="index.html#Whyus">Why Us?</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column col-text">
+            <h4>Info</h4>
+            <div class="location">
+              <a
+                href="https://maps.app.goo.gl/5KzioyfZW12hdkaV7"
+                target="_blank"
+                style="font-size: 16px; text-decoration: none; color: white"
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: rgb(0, 255, 64); width: 30px; font-size: 20px"
+                ></i>
+                2315 Loreland Ave, Mississauga,<br />
+                ON L4X 2A6</a
+              >
+              <br /><br />
+              <span id="phone-no" class="tooltiptext"
+                ><a href="tel:9057035833" onclick=""
+                  ><i
+                    class="fa-solid fa-square-phone-flip"
+                    style="color: rgb(0, 255, 64); width: 30px; font-size: 20px"
+                  ></i>
+                  +1 905-703-5833</a
+                ></span
+              >
+              <br /><br />
+              <span id="phone-no" class="tooltiptext"
+                ><a href="tel:8888590035"
+                  ><i
+                    class="fa-solid fa-f"
+                    style="color: rgb(0, 255, 64); width: 30px; font-size: 20px"
+                  ></i>
+                  +1 888 859 0035</a
+                ></span
+              >
+              <br /><br />
+              <p style="color: white">
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: rgb(0, 255, 64); width: 30px; font-size: 20px"
+                ></i>
+                infoevergreenfreight@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="footer-map column">
+            <h4>Our Location</h4>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.684540089479!2d-79.5706043!3d43.6131095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b47f0623f1d55%3A0x20b5c92b6962bc6e!2s2315%20Loreland%20Ave%2C%20Mississauga%2C%20ON%20L4X%202A6!5e0!3m2!1sen!2sca!4v1708537330225!5m2!1sen!2sca"
+                width="400"
+                height="300"
+                style="border: 0; border-radius: 5px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="footer-last">
+        <h3>www.evergreenfreightinc.com | created by Gurkirat Singh</h3>
+      </div>
+    </main>
+    <script>
+      function showSlidebar() {
+        const sidebar = document.querySelector(".nav-2");
+        sidebar.style.display = "flex";
+      }
+      function hideSlidebar() {
+        const sidebar = document.querySelector(".nav-2");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
