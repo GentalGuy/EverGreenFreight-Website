@@ -40,7 +40,10 @@ header {
   width: 100vw;
   height: 8vh;
   padding: 0 20px;
-  position: relative;
+  position: fixed;
+  background-color: white;
+  z-index: 11112;
+  
 }
 
 #nav1 {
