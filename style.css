@@ -136,7 +136,7 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(0, 0, 0, 0.18);
   justify-content: center;
   position: relative;
 }
