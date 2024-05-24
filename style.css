@@ -792,7 +792,7 @@ header {
 .top-img {
   width: 100vw;
   height: 70vh;
-  background: url(assests/image/customer.jpg);
+  background: url(assests/image/customer.webp);
   filter: grayscale(80%);
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,5 +1,4 @@
 var tl = gsap.timeline();
-var t2 = gsap.timeline();
 tl.from("#nav1 .header-left img", {
   y: -50,
   opacity: 0,
