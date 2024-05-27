@@ -1266,3 +1266,10 @@ footer {
 .footer-last h4{
   font-weight: 300;
 }
+
+
+@media (max-width:700px){
+  .leftFooter ul li a {
+    font-size: 1.4rem;
+  }
+}
