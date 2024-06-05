@@ -615,6 +615,9 @@ header {
   margin-top: 50px;
   align-items: center;
   justify-content: center;
+  animation: leftappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .topSec04 h1 {
@@ -632,6 +635,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .midSec04 p {
@@ -649,6 +655,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+
 }
 
 .card {
@@ -661,6 +668,9 @@ header {
   height: 50vh;
   box-shadow: 0px 0px 3px black;
   transition: all ease 0.3s;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 
 .card:hover {
@@ -720,6 +730,9 @@ header {
   justify-content: center;
   gap: 40px;
   color: white;
+  animation: leftappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .rightSec05 {
@@ -728,6 +741,9 @@ header {
   background-image: url(assests/image/warehouse.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  animation: rightappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .top-leftSec05 h1 {
@@ -985,6 +1001,9 @@ textarea {
 .top-07 {
   width: 100%;
   text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .top-07 h1 {
@@ -1004,6 +1023,9 @@ textarea {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
   
 }
 
@@ -1076,6 +1098,9 @@ textarea {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: leftappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .leftSec08 h3 {
@@ -1119,6 +1144,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .logoFooter {
@@ -1128,6 +1156,9 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  animation: clipappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .logoFooter h1 {
@@ -1272,4 +1303,51 @@ footer {
   .leftFooter ul li a {
     font-size: 1.4rem;
   }
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale:1;
+  }
+}
+@keyframes leftappear{
+  from{
+    opacity: 0;
+    transform:translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform:translateX(0px);
+  }
+}
+@keyframes clipappear{
+  from{
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to{
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes rightappear{
+  from{
+    opacity: 0;
+    transform:translateX(100px);
+  }
+  to{
+    opacity: 1;
+    transform:translateX(0px);
+  }
+}
+
+.leftSec02{
+  animation: leftappear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
