@@ -106,13 +106,14 @@ body {
   }
 }
 
+
 header {
   width: 100vw;
   height: 8vh;
   padding: 0 20px;
   position: fixed;
-  background-color: white;
-  z-index: 11112;
+  background-color: rgb(255, 255, 255);
+  z-index: 199;
 }
 
 #nav1 {
@@ -310,10 +311,13 @@ header {
 
 #menu-button:hover{
 
+
 }
 
 @keyframes vibrate {
-  
+  from{
+    
+  }
 }
 
 .menu-inside {
@@ -609,6 +613,7 @@ header {
   align-items: center;
   letter-spacing: 5px;
   text-transform: uppercase;
+  
 }
 
 .topSec03 h1 {
@@ -679,6 +684,7 @@ header {
   font-weight: 600;
   z-index: 33;
   padding-right: 30px;
+  color: rgb(0, 0, 0);
 }
 
 .elem-right p {
