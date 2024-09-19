@@ -309,16 +309,7 @@ header {
   cursor: pointer;
 }
 
-#menu-button:hover{
 
-
-}
-
-@keyframes vibrate {
-  from{
-    
-  }
-}
 
 .menu-inside {
   position: fixed;
