@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+      .Btn-home {
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #24D366;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+      a:hover {
+        background-color: #000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <div class="Btn-home"><a href="index.html">Home Page</a></div>
+    <!-- Embedding the Event Contact Form -->
+    <!-- start here -->
+
+    <iframe
+      id="JotFormIFrame-243228109246252"
+      title="Contact Us Form"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/243228109246252"
+      frameborder="0"
+      style="min-width: 100%; max-width: 100%; height: 539px; border: none"
+      scrolling="no"
+    >
+    </iframe>
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+    <script>
+      window.jotformEmbedHandler(
+        "iframe[id='JotFormIFrame-243228109246252']",
+        "https://form.jotform.com/"
+      );
+    </script>
+
+    <!-- end here -->
+  </body>
+</html>
