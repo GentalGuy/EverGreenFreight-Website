@@ -1,0 +1,7 @@
+[33m7e65de1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: checkout: moving from update to main
+[33mbffd852[m HEAD@{1}: checkout: moving from main to update
+[33m7e65de1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{2}: checkout: moving from update to main
+[33mbffd852[m HEAD@{3}: commit: logo img fix
+[33mbd1fb35[m HEAD@{4}: commit: remove some files
+[33mf446671[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{5}: checkout: moving from master to update
+[33mf446671[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{6}: commit (initial): New Version of website updated
