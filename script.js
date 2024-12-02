@@ -236,6 +236,10 @@ function revealToSpan() {
 
         display: "none",
       })
+      .to("#fs2, #fs1, .parent", {
+
+        display: "none",
+      })
 
       // tl.to("#main", {
       //   height:"100vh",
