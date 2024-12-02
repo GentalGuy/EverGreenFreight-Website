@@ -7,7 +7,6 @@ function smoothScroll() {
 
   // Listen for the scroll event and log the event data
   lenis.on("scroll", (e) => {
-    console.log(e);
     function hoverMenuClick(e) {
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -44,8 +43,6 @@ function scrollerElement() {
   btnleft.onclick = () => {
     slider.prepend(slider.querySelector(".slider-sec04:last-child"));
   };
-
-  
 }
 
 function mouseHover() {
@@ -181,7 +178,84 @@ function toggleMenu() {
   });
 }
 
+function loadingPage() {
+  var tl = gsap.timeline();
+}
+
+function revealToSpan() {
+  document.querySelectorAll(".reveal").forEach(function (elem) {
+    let parent = document.createElement("span");
+    let child = document.createElement("span");
+
+    parent.classList.add("parent");
+    child.classList.add("child");
+    child.innerHTML = elem.innerHTML;
+    parent.appendChild(child);
+
+    elem.innerHTML = "";
+    elem.appendChild(parent);
+
+    var tl = gsap.timeline();
+    tl.from(".child span", {
+      x: 100,
+      delay: 1,
+      stagger: 0.2,
+      duration: 2,
+      ease: Power3.easeInOut,
+    })
+      .to(".parent .child", {
+        y: "100%",
+        duration: 1,
+        ease: Circ.easeInOut,
+      })
+      .to("#fs", {
+        height: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+      })
+      .to("#fs2", {
+        height: "100%",
+        duration: 1,
+        top: 0,
+        delay: -1,
+        ease: Expo.easeInOut,
+      })
+      .to("#fs2 h1", {
+        delay: -1,
+        duration: 1,
+        display: "block",
+      })
+      .to("#fs2", {
+        height: "0%",
+        delay: -0.2,
+        bottom: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+      })
+      .to("#fs2 h1", {
+
+        display: "none",
+      })
+
+      // tl.to("#main", {
+      //   height:"100vh",
+      //   duration:1,
+      //   ease: Expo.easeInOut,
+      // })
+
+   
+      .to("header", {
+        display: "flex",
+      })
+      .to(".menu-content", {
+        display: "flex",
+      });
+  });
+}
+
 smoothScroll();
+revealToSpan();
+// loadingPage();
 mouseHover();
 scrollFixed();
 scrollerElement();
