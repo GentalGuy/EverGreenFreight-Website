@@ -80,8 +80,10 @@ function mouseHover() {
   });
 }
 function currentYear() {
-  let Year = document.querySelector("#current-year");
-  Year.textContent = new Date().getFullYear();
+  let Year = document.querySelectorAll("#current-year");
+  Year.forEach((val) => {
+    val.textContent = new Date().getFullYear();
+  });
 }
 
 function videoHover() {
