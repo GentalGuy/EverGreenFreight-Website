@@ -148,6 +148,7 @@ function toggleMenu() {
     gsap.to(menuContent, {
       top: menuContent.classList.contains("menu-active") ? "0%" : "-100%",
       duration: 0.5,
+      display: "block",
       ease: "power2.inOut",
     });
 
@@ -168,8 +169,9 @@ function toggleMenu() {
 
       // GSAP animation to close the menu
       gsap.to(menuContent, {
-        top: "-100%", // Slide out the menu
+        top: "-200%", // Slide out the menu
         duration: 0.5,
+        display: "none",
         ease: "power2.inOut",
       });
 
@@ -196,7 +198,10 @@ function revealToSpan() {
 
     elem.innerHTML = "";
     elem.appendChild(parent);
-
+    let typeSplit = new SplitType("#animateText", {
+      types: "lines, words, chars",
+      tagName: "span",
+    });
     var tl = gsap.timeline();
     tl.from(".child span", {
       x: 100,
@@ -243,19 +248,12 @@ function revealToSpan() {
         display: "none",
       })
 
-      // tl.to("#main", {
-      //   height:"100vh",
-      //   duration:1,
-      //   ease: Expo.easeInOut,
-      // })
-
-   
       .to("header", {
         display: "flex",
       })
       .to(".menu-content", {
         display: "flex",
-      });
+      })
   });
 }
 

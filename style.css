@@ -352,11 +352,13 @@ header.sticky {
   justify-content: center;
   align-items: center;
   text-align: center;
-  top: -100%;
+  top: -200%;
+  display: none;
 }
 
 .active-menu {
   top: 0%;
+  display: block;
 }
 
 .menu-content ul {
@@ -399,13 +401,15 @@ main
   display: flex;
   justify-content: flex-start;
   align-items: end;
+  text-align: center;
 }
 
 .upper-sec01 h1 {
   font-size: 4.5vw;
   font-weight: 500;
   position: relative;
-  top: 20px;
+  top: 5%;
+
   padding-left: 60px;
   background: transparent;
   z-index: 1;
