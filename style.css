@@ -635,7 +635,12 @@ main
   padding-right: 120px;
   position: relative;
 }
-
+@media (max-width:1200px) {
+  .right-img-sec04{
+    padding-right: 0;
+  }
+  
+}
 .right-img-sec04 h3 {
   font-size: 2vw;
   font-weight: 500;
@@ -688,6 +693,7 @@ footer {
   align-items: center;
   flex-direction: row;
   margin-bottom:4vw;
+  gap: 10px;
 }
 
 .logoFooter {
@@ -719,33 +725,58 @@ footer {
   align-items: center;
 }
 
-.leftFooter h3 {
+.leftFooter h3, .contact-footer h3 {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.8vw;
 }
-.leftFooter ul {
+.leftFooter ul , .contact-footer ul{
   list-style: none;
 }
 
-.leftFooter ul li a {
-  font-size: 1.5rem;
+.leftFooter ul li a , .contact-footer ul li a{
+  font-size: 1.5vw;
   text-decoration: none;
   font-weight: 300;
   color: #9b9b9b;
   transition: all 0.3s ease;
 }
 
-.leftFooter ul li a:hover {
+.leftFooter ul li a:hover , .contact-footer ul li a:hover {
   color: black;
   padding-left: 8px;
 }
 
-.rightFooter {
+@media(max-width:1000px){
+  .leftFooter h3, .contact-footer h3{
+    font-size: 1.8rem;
+  }
+
+  .leftFooter ul li a, .contact-footer ul li a {
+    font-size: 1.5rem;
+  }
+}
+
+.rightFooter{
   flex: 1;
   height: 100%;
   padding-top: 50px;
   justify-content: start;
   align-items: start;
+}
+.contact-footer{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  padding-top: 50px;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-footer h3{
+  margin-bottom: 10px;
 }
 
 .rightFooter ul li a {
@@ -790,6 +821,7 @@ footer {
   fill: red;
   transform: scale(1.1);
 }
+
 
 @media (max-width: 1000px) {
   .footer {
